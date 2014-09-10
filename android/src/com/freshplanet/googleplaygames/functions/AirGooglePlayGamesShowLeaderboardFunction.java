@@ -6,11 +6,11 @@ import com.adobe.fre.FREObject;
 import com.freshplanet.googleplaygames.Extension;
 import com.google.android.gms.games.Games;
 
-public class AirGooglePlayGamesShowLeaderboardsFunction implements FREFunction {
+public class AirGooglePlayGamesShowLeaderboardFunction implements FREFunction {
 	
     final int RC_UNUSED = 6001;
     
-	public AirGooglePlayGamesShowLeaderboardsFunction() {
+	public AirGooglePlayGamesShowLeaderboardFunction() {
 		// TODO Auto-generated constructor stub
 	}
 
