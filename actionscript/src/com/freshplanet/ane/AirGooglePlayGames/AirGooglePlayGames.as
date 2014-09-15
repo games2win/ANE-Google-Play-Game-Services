@@ -110,12 +110,30 @@ package com.freshplanet.ane.AirGooglePlayGames
 			}
 		}
 		
+		public function showLeaderboard(leaderboardId:String):void
+		{
+			if (AirGooglePlayGames.isSupported)
+			{
+				_context.call("showLeaderboard", leaderboardId);
+			}
+		}
+		
 		public function getActivePlayerName():String
 		{
 			var name:String;
 			if (AirGooglePlayGames.isSupported)
 			{
 				name = _context.call("getActivePlayerName") as String;
+			}
+			return name;
+		}
+		
+		public function getActivePlayerId():String
+		{
+			var name:String;
+			if (AirGooglePlayGames.isSupported)
+			{
+				name = _context.call("getActivePlayerId") as String;
 			}
 			return name;
 		}

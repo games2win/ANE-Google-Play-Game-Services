@@ -29,6 +29,7 @@ import android.util.Log;
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesGetActivePlayerName;
+import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesGetActivePlayerId;
 import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesReportAchievementFunction;
 import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesReportScoreFunction;
 import com.freshplanet.googleplaygames.functions.AirGooglePlayGamesShowAchievementsFunction;
@@ -61,8 +62,9 @@ public class ExtensionContext extends FREContext implements GameHelper.GameHelpe
 		functionMap.put("reportAchievemnt", new AirGooglePlayGamesReportAchievementFunction());
 		functionMap.put("reportScore", new AirGooglePlayGamesReportScoreFunction());
 		functionMap.put("showStandardAchievements", new AirGooglePlayGamesShowAchievementsFunction());
-		functionMap.put("showLeaderboard", new AirGooglePlayGamesShowLeaderboardFunction());
 		functionMap.put("getActivePlayerName", new AirGooglePlayGamesGetActivePlayerName());
+		functionMap.put("getActivePlayerId", new AirGooglePlayGamesGetActivePlayerId());
+		functionMap.put("showLeaderboard", new AirGooglePlayGamesShowLeaderboardFunction());
 		return functionMap;	
 	}
 	

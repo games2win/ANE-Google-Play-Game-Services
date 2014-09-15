@@ -19,8 +19,19 @@ public class AirGooglePlayGamesShowLeaderboardFunction implements FREFunction {
 
 		Extension.context.createHelperIfNeeded(arg0.getActivity());
         if (Extension.context.isSignedIn()) {
-        	arg0.getActivity().startActivityForResult(Games.Leaderboards.getLeaderboardIntent(Extension.context.getApiClient(), arg1[0].getAsString(), RC_UNUSED);
-          
+
+        	String leaderboardId = null;
+			try
+			{
+				leaderboardId = arg1[0].getAsString();
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+				return null;
+			}
+			
+        	arg0.getActivity().startActivityForResult(Games.Leaderboards.getLeaderboardIntent(Extension.context.getApiClient(), leaderboardId), RC_UNUSED);
         }
 		
 		return null;
